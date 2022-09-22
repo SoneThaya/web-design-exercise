@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MidwayUSA Design Exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="switch_tabs">
+            <div class="product_suggestion_tab" onclick="productTab()">Product Suggestion</div>
+            <div class="contact_us_tab" onclick="contactTab()">Contact Us</div>
+        </div>
+    </div>
+    
+    <div class="forms_container">
+        <form id="product_form" class="product_form">
+            <h1>Product Suggestion</h1>
+            <div class="formcontainer">
+            <hr/>
+            <div class="container">
+                <label for="pname"><strong>Product Name</strong></label>
+                <input autofocus type="text" placeholder="Enter Name" name="pname" required>
+                <label for="pemail"><strong>Email</strong></label>
+                <input type="email" placeholder="Enter email" name="pemail" required>
+                <label for="description"><strong>Description of Product</strong></label>
+                <textarea type="text" placeholder="Enter description" name="description" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+   
+    
+
+  
+        <form id="contact_form" class="contact_form">
+            <h1>Contact Us</h1>
+            <div class="formcontainer">
+            <hr/>
+                <div class="container">
+                    <label for="cname"><strong>Name</strong></label>
+                    <input autofocus type="text" placeholder="Enter name" name="cname" required>
+                    <label for="cemail"><strong>Email</strong></label>
+                    <input type="email" placeholder="Enter email" name="cemail" required>
+                    <label for="reason"><strong>Contact Reason</strong></label>
+                    <select name="reason" id="reason">
+                        <option value="order_question">Order question</option>
+                        <option value="website_feedback">Website feedback</option>
+                        <option value="trouble_finding_product" onclick="productTab()">Trouble finding product</option>
+                    </select>
+                    <label for="feedback"><strong>Feedback</strong></label>
+                    <textarea rows="5" placeholder="Enter feedback" name="feedback" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+      <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
