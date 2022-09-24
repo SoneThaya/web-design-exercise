@@ -1,62 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MidwayUSA Design Exercise</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="header">
-        <div class="switch_tabs">
-            <div class="product_suggestion_tab" onclick="productTab()">Product Suggestion</div>
-            <div class="contact_us_tab" onclick="contactTab()">Contact Us</div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="nav__container">
+      <nav class="navbar">
+        <h1 id="navbar__logo">MidwayUSA</h1>
+        <div class="menu__toggle" id="mobile__menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+        <ul class="nav__menu">
+          <li>
+            <a href="#" id="product__modal__btn" class="nav__links"
+              >Product Form</a
+            >
+          </li>
+          <li>
+            <a href="#" id="contact__modal__btn" class="nav__links"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
-    
-    <div class="forms_container">
-        <form id="product_form" class="product_form">
+    <!-- end navbar -->
+
+    <!-- main content -->
+    <section class="main">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>Welcome to MidwayUSA</h1>
+          <p>
+            Get the latest news about industry support, new product offerings,
+            improved services, awards and more.
+          </p>
+        </div>
+        <div class="main__img_container">
+          <img id="main__img" src="./images/devices.svg" alt="main logo" />
+        </div>
+      </div>
+    </section>
+    <!-- end main content -->
+
+    <!-- product suggestion form modal -->
+    <div class="modal" id="product__modal">
+      <div class="modal__content">
+        <span class="product__close__btn">&times;</span>
+        <div class="modal__content__left">
+          <img id="modal__img" src="./images/forms.svg" alt="product form" />
+        </div>
+        <div class="modal__content__right">
+          <form action="/" method="GET" class="modal__form" id="product-form">
             <h1>Product Suggestion</h1>
-            <div class="formcontainer">
-            <hr/>
-            <div class="container">
-                <label for="pname"><strong>Product Name</strong></label>
-                <input autofocus type="text" placeholder="Enter Name" name="pname" required>
-                <label for="pemail"><strong>Email</strong></label>
-                <input type="email" placeholder="Enter email" name="pemail" required>
-                <label for="description"><strong>Description of Product</strong></label>
-                <textarea type="text" placeholder="Enter description" name="description" required></textarea>
+            <div class="form__validation">
+              <input
+                type="text"
+                class="modal__input"
+                id="product-name"
+                name="product-name"
+                placeholder="Enter your full name"
+              />
+              <p>Error Message</p>
             </div>
-            <button type="submit">Submit</button>
-        </form>
-   
-    
-
-  
-        <form id="contact_form" class="contact_form">
-            <h1>Contact Us</h1>
-            <div class="formcontainer">
-            <hr/>
-                <div class="container">
-                    <label for="cname"><strong>Name</strong></label>
-                    <input autofocus type="text" placeholder="Enter name" name="cname" required>
-                    <label for="cemail"><strong>Email</strong></label>
-                    <input type="email" placeholder="Enter email" name="cemail" required>
-                    <label for="reason"><strong>Contact Reason</strong></label>
-                    <select name="reason" id="reason">
-                        <option value="order_question">Order question</option>
-                        <option value="website_feedback">Website feedback</option>
-                        <option value="trouble_finding_product" onclick="productTab()">Trouble finding product</option>
-                    </select>
-                    <label for="feedback"><strong>Feedback</strong></label>
-                    <textarea rows="5" placeholder="Enter feedback" name="feedback" required></textarea>
+            <div class="form__validation">
+              <input
+                type="email"
+                class="modal__input"
+                id="product-email"
+                name="product-email"
+                placeholder="Enter your email"
+              />
+              <p>Error Message</p>
             </div>
-            <button type="submit">Submit</button>
-        </form>
+            <div class="form__validation">
+              <textarea
+                rows="5"
+                type="text"
+                class="modal__textarea"
+                id="product-description"
+                name="product-description"
+                placeholder="Enter product description"
+              ></textarea>
+              <p>Error Message</p>
+            </div>
+            <input
+              type="submit"
+              class="product__modal__input__btn"
+              value="Submit"
+            />
+          </form>
+        </div>
+      </div>
     </div>
+    <!-- end product suggestion form modal -->
 
-      <script type="text/javascript" src="app.js"></script>
-</body>
+    <!-- contact us form modal -->
+    <div class="modal" id="contact__modal">
+      <div class="modal__content">
+        <span class="contact__close__btn">&times;</span>
+        <div class="modal__content__left">
+          <div id="map"></div>
+        </div>
+        <div class="modal__content__right">
+          <form action="/" method="GET" class="modal__form" id="contact-form">
+            <h1>Contact Us</h1>
+            <div class="form__validation">
+              <input
+                type="text"
+                class="modal__input"
+                id="contact-name"
+                name="contact-name"
+                placeholder="Enter your full name"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form__validation">
+              <input
+                type="email"
+                class="modal__input"
+                id="contact-email"
+                name="contact-email"
+                placeholder="Enter your email"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form__validation">
+              <select
+                name="contact-reason"
+                id="contact-reason"
+                class="reason__select"
+                onchange="SwitchToProductModal()"
+              >
+                <option
+                  value=""
+                  disabled
+                  selected
+                  hidden
+                  class="reason__placeholder"
+                >
+                  Select your reason
+                </option>
+                <option value="order_question">Order question</option>
+                <option value="website_feedback">Website feedback</option>
+                <option value="trouble_finding_product">
+                  <a href="#" id="product__modal__btn"
+                    >Trouble finding product</a
+                  >
+                </option>
+              </select>
+              <p>Error Message</p>
+            </div>
+            <div class="form__validation">
+              <textarea
+                rows="5"
+                type="text"
+                class="modal__textarea"
+                id="contact-feedback"
+                name="contact-feedback"
+                placeholder="Enter feedback"
+              ></textarea>
+              <p>Error Message</p>
+            </div>
+            <input
+              type="submit"
+              class="contact__modal__input__btn"
+              value="Submit"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- end contact us form modal -->
+
+    <!-- footer -->
+    <footer>
+      <p class="copyright__text">© Copyright 2022. All rights reserved.</p>
+    </footer>
+    <!-- end footer -->
+
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-lq9DGKd521lWdeD14A8SfwRfGlpd-gA&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
 </html>
