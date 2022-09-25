@@ -1,5 +1,3 @@
-var googleMapsApiKey = config.GOOGLE_MAPS_API_KEY;
-
 const menu = document.querySelector("#mobile__menu");
 const menuLinks = document.querySelector(".nav__menu");
 
