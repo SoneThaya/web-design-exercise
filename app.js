@@ -134,6 +134,7 @@ function SwitchToProductModal() {
   }
 }
 
+// Google maps
 function initMap() {
   const midway = { lat: 38.97, lng: -92.4217 };
   const map = new google.maps.Map(document.getElementById("map"), {

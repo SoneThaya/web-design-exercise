@@ -6,8 +6,8 @@
   --lightgray: #a19b9b;
   --brightred: #f9423d;
   --white: #fff;
-  --lightred: #e27975;
   --lightblue: #0b3680;
+  --black: #000;
 }
 * {
   box-sizing: border-box;
@@ -162,6 +162,7 @@ footer {
   background: var(--darkgray);
   text-align: center;
   padding-bottom: 10px;
+  font-size: 12px;
 }
 .copyright__text {
   color: var(--white);

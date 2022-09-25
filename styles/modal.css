@@ -72,10 +72,8 @@
 }
 
 .modal__form {
-  /* position: absolute; */
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
   width: 90%;
   height: 90%;
   display: flex;
@@ -173,17 +171,17 @@
   font-size: 600;
 }
 
-/* .modal__textarea {
-  height: auto;
-} */
-
-.modal__textarea::placeholder {
+#contact-reason {
   color: var(--lightgray);
 }
 
-select[required] option:first-child {
+#contact-reason option {
+  color: var(--black);
+  padding: 0;
+}
+
+.modal__textarea::placeholder {
   color: var(--lightgray);
-  background-color: red;
 }
 
 #map {
